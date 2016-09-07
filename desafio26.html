@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Desafio 26</title>
+</head>
+<body>
+	<script>
+		//Clase constructora Alumnos.
+
+		function Alumnos (nombre,edad,genero){
+			this.nombre = nombre; 
+			this.edad = edad;
+			this.genero = genero;
+		}
+
+		//Objetos alumnos.
+
+		var valentina = new Alumnos("valentina",20,"F");	
+		var cristobal = new Alumnos("Cristobal",19,"M");
+		var agustin = new Alumnos("Agustin",18,"M");
+		var freddy = new Alumnos("Freddy",21,"M");
+		var rosa = new Alumnos("Rosa", 22, "F");
+		var constanza = new Alumnos("Constanza",17,"F");
+	
+		//Declaracion de variables vacias.
+		
+		var mujeres = [];
+		var hombres = [];
+		var edadMujer  = 0;
+		var edadHombre = 0;
+		var edadTotal = 0;
+		//cuenta generos.
+
+		var curso = [valentina,cristobal,agustin,freddy,rosa,constanza];	
+		for (var i = 0; i < curso.length; i++){
+			 if(curso[i].genero == "F" ){
+			 		//agrego los datos de genero mujer y ademas sumo la edad de las mujeres
+			 		mujeres.push(curso[i]);
+			 		edadMujer=edadMujer+curso[i].edad;
+			 		//console.log(mujeres);
+			 }else {
+			 	//agrego los datos de genero mujer y ademas sumo la edad de las mujeres
+			 	hombres.push(curso[i]);
+			 	edadHombre=edadHombre+curso[i].edad;
+			 	//console.log(hombres.length);
+			 }
+
+			//al terminar el for muestra la edad de todos los alumnos.
+			edadTotal=edadTotal+edadHombre+edadMujer;
+
+		}
+
+
+	</script>	
+
+
+	
+</body>
+</html>
